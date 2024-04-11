@@ -1,0 +1,31 @@
+<form class="dadosDeclarante" [formGroup]="dadosDeclarante">
+    <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName = "nomeCompleto">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName = "cpf">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput formControlName = "dataNascimento">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Telefone</mat-label>
+        <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName = "telefone">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Profissão</mat-label>
+        <input matInput formControlName = "profissao">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Nº Conta Bancaria</mat-label>
+        <input matInput formControlName = "numeroContaBancaria">
+    </mat-form-field>
+</form>

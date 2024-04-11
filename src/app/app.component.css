@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header .a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo {
+    max-height: 32px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    font-weight: 300;
+}
+.spacer {
+    flex: 1 1 auto;
+  }
