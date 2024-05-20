@@ -1,0 +1,16 @@
+<mat-card-subtitle class="subtitle">Faça Login</mat-card-subtitle>
+<form class="form-container"  align="center" [formGroup]="formLogin">
+    <mat-form-field class="email-cotainer" appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput formControlName="senha">
+    </mat-form-field>
+</form>
+
+<mat-card-actions class="actions">
+    <button class="botao-entrar">Entrar</button>
+</mat-card-actions>

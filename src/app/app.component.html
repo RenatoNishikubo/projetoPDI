@@ -8,22 +8,17 @@
     <h1 class="title v-middle">Seu Declarador IR Online</h1>
   </span>
   <span class="spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>login</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>home</mat-icon>
-  </button>
-</mat-toolbar>
-
-<mat-toolbar class="footer mat-elevation-z5 ">
-  <span class="spacer"></span>
-  <span>
-    Projeto PDI
-    <i class="material-icons v-middle">
-      terminal
-    </i>
-  </span>
+  <div class="actions-containers">
+    <button mat-icon-button (click)="irParaCadastro()">
+      <mat-icon>note_add</mat-icon>
+    </button>
+    <button mat-icon-button (click)="irParaMonitorOperacoes()">
+      <mat-icon> format_list_numbered</mat-icon>
+    </button>
+    <button mat-icon-button (click)="sair()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

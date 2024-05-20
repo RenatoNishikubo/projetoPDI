@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-form-endereco',
@@ -7,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './form-endereco.component.css'
 })
 export class FormEnderecoComponent implements OnInit{
+  @Output() formCompleted = new EventEmitter<any>();
 
   declare endereco: FormGroup;
 
@@ -18,11 +20,18 @@ export class FormEnderecoComponent implements OnInit{
     this.endereco = this.formBuilder.group({
       cep: ["", Validators.required],
       rua: ["", Validators.required],
-      numero: ["", Validators.required],
+      numero: [0, Validators.required],
       complemento: [null],
       bairro: ["", Validators.required],
       cidade: ["", Validators.required],
       estado: ["", Validators.required]
+    });
+
+    this.endereco.statusChanges.pipe(
+      debounceTime(2000),).subscribe(status => {
+      if (status === 'VALID') {
+        this.formCompleted.emit(this.endereco.value);
+      }
     });
   } 
 }

@@ -1,0 +1,37 @@
+<mat-dialog-content *ngIf="this.informacoes">
+    <h2 mat-dialog-title>Dados do Declarante</h2>
+    <mat-list role="list">
+        <mat-list-item >
+            Documento: {{this.informacoes.cpf}} | Nome: {{this.informacoes.nome}} | Email: {{this.informacoes.email}} | Telefone: {{this.informacoes.telefone}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+    <h2 mat-dialog-title>Endereço do Declarante</h2>
+    <mat-list>
+        <mat-list-item  *ngFor="let endereco of this.informacoes.endereco">
+            Rua: {{endereco.rua}}, nº: {{endereco.numero}}, {{endereco.cidade}} - {{endereco.estado}}  cep: {{endereco.cep}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+    <h2 mat-dialog-title>Dependentes</h2>
+    <mat-list>
+        <mat-list-item *ngFor="let dependente of this.informacoes.dependentes" >
+            {{dependente.tipo}} - {{dependente.nome}}, Documento: {{dependente.documento}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+    <p></p>
+    <h2 mat-dialog-title>Propriedades do Declarante</h2>
+    <mat-list>
+        <mat-list-item *ngFor="let propriedade of this.informacoes.propriedades">
+            {{propriedade.tipo}} - Compra feita em {{propriedade.anoCompra}} por {{propriedade.valorCompra}} || 
+            Venda  feita em {{propriedade.anoVenda}} por {{propriedade.valorVenda}} 
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button class="btn-check" mat-icon-button mat-dialog-close>
+    <mat-icon class="check-icon">check_circle</mat-icon>
+  </button>
+</mat-dialog-actions>

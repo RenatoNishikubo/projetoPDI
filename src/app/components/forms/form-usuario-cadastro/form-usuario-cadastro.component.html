@@ -1,0 +1,20 @@
+<mat-card-subtitle class="subtitle">Faça Seu Cadastro na Página</mat-card-subtitle>
+<form class="form-container" align="center" [formGroup]="formCadastro">
+    <mat-form-field appearance="outline">
+        <mat-label>Nome de Usuario</mat-label>
+        <input matInput formControlName="nomeUsuario">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput formControlName="senha">
+    </mat-form-field>
+</form>
+<mat-card-actions class="actions">
+    <button class="botao-entrar">Cadastrar</button>
+</mat-card-actions>

@@ -1,18 +1,29 @@
-<form class="dependentes" [formGroup]="dependentes">
-    <mat-form-field appearance="outline">
-        <mat-label>Tipo de Dependente</mat-label>
-        <input matInput formControlName = "tipoDependente">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Nome Completo</mat-label>
-        <input matInput formControlName = "nomeCompleto">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>CPF</mat-label>
-        <input matInput formControlName = "cpf">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Data de Nascimento</mat-label>
-        <input matInput formControlName = "dataNascimento">
-    </mat-form-field>
+<form class="container" [formGroup]="dependentes">
+    <div formArrayName="formArray">
+        <div *ngFor="let group of formArray.controls; let i = index" [formGroupName]="i">
+            <mat-form-field appearance="outline">
+                <mat-label>Tipo de Dependente</mat-label>
+                <input matInput formControlName="tipoDependente">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Nome Completo</mat-label>
+                <input matInput formControlName="nomeCompleto">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>CPF</mat-label>
+                <input matInput formControlName="cpf">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Data de Nascimento</mat-label>
+                <input matInput formControlName="nascimento">
+            </mat-form-field>
+            <button *ngIf="i > 0"
+            class="btn-remove-form"(click)="removeFormGroup(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
 </form>
+<button class="btn-adicionar-form" (click)="addFormGroup()">
+    <mat-icon>library_add</mat-icon>
+</button>

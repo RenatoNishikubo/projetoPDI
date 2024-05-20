@@ -1,0 +1,55 @@
+.container {
+    background-color: #07A0C3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-main {
+    background: linear-gradient(180deg, #0689e0 0%, #615e5d 100%);
+    border-radius: 100px;
+    width: 1200px;
+    min-height: 900px;
+    max-height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top : 20px;
+    padding-bottom: 40px;
+    display: grid;
+    justify-items: center;
+}
+.header {
+    height: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: Playfair Display;
+    font-size: 50px;
+    color: #615e5d;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 1100px;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  }
+
+.filter{
+    margin-bottom: 0px;
+    height: 100px;
+}
+ng-container{
+  width: 100px;
+}

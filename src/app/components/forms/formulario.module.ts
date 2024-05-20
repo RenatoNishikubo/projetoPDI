@@ -9,13 +9,19 @@ import { FormDadosDeclaranteComponent } from './form-dados-declarante/form-dados
 import { FormEnderecoComponent } from './form-endereco/form-endereco.component';
 import { FormDependentesComponent } from './form-dependentes/form-dependentes.component';
 import { FormPropriedadesComponent } from './form-propriedades/form-propriedades.component';
+import { FormUsuarioCadastroComponent } from './form-usuario-cadastro/form-usuario-cadastro.component';
+import { FormUsuarioLoginComponent } from './form-usuario-login/form-usuario-login.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     FormDadosDeclaranteComponent,
     FormEnderecoComponent,
     FormDependentesComponent,
-    FormPropriedadesComponent
+    FormPropriedadesComponent,
+    FormUsuarioCadastroComponent,
+    FormUsuarioLoginComponent
   ],
   imports: [
     CommonModule, 
@@ -24,13 +30,16 @@ import { FormPropriedadesComponent } from './form-propriedades/form-propriedades
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatCardModule,
+    MatIconModule
   ],
   exports: [ 
     FormDadosDeclaranteComponent,
     FormEnderecoComponent,
     FormDependentesComponent,
-    FormPropriedadesComponent
-
+    FormPropriedadesComponent,
+    FormUsuarioCadastroComponent,
+    FormUsuarioLoginComponent
   ]
 })
 export class FormularioModule { }

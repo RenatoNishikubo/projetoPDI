@@ -1,22 +1,33 @@
-<form class="propriedades" [formGroup]="propriedades">
-    <mat-form-field appearance="outline">
-        <mat-label>Tipo de Propriedade</mat-label>
-        <input matInput formControlName = "tipoPropriedade">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Ano da Compra</mat-label>
-        <input matInput formControlName = "anoCompra">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Ano da Venda</mat-label>
-        <input matInput formControlName = "anoVenda">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Valor de Compra</mat-label>
-        <input matInput formControlName = "valorCompra">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Valor de Venda</mat-label>
-        <input matInput formControlName = "valorVenda">
-    </mat-form-field>
+<form class="container" [formGroup]="propriedades">
+    <div formArrayName="formArray">
+        <div class="inputs-container" *ngFor="let group of formArray.controls; let i = index" [formGroupName]="i">
+            <mat-form-field appearance="outline">
+                <mat-label>Tipo de Propriedade</mat-label>
+                <input matInput formControlName="tipoPropriedade">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Ano da Compra</mat-label>
+                <input matInput formControlName="anoCompra">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Ano da Venda</mat-label>
+                <input matInput formControlName="anoVenda">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Valor de Compra</mat-label>
+                <input matInput formControlName="valorCompra">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Valor de Venda</mat-label>
+                <input matInput formControlName="valorVenda">
+            </mat-form-field>
+            <button *ngIf="i > 0"
+            class="btn-remove-form" (click)="removeFormGroup(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </div>
 </form>
+<button class="btn-adicionar-form" (click)="addFormGroup()">
+    <mat-icon>library_add</mat-icon>
+</button>

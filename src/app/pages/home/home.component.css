@@ -1,17 +1,20 @@
 .container {
-    background-color: #00aeff;
+    background-color: #07A0C3;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .card {
+    position: relative;
+    background: linear-gradient(180deg, #0689e0 0%, #615e5d 100%);
     border-radius: 100px;
     width: 1200px;
-    height: 800px;
+    min-height: 800px;
+    max-height: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom : 20px;
+    margin-bottom : 70px;
     margin-top : 20px;
 }
 
@@ -30,24 +33,24 @@
 .title {
     font-family: Playfair Display;
     font-size: 50px;
-    color: #ffffff;
-    /* #00aeff */
+    color: #615e5d;
     text-align: center;
     margin-bottom: 20px;
 }
 
 
 .actions{
-    padding-top: 20px;
     display: flex;
     justify-content: center;
 }
 
 .botao-enviar {
-    background-color: #007bff;
+    position: absolute;
+    background: linear-gradient(180deg, #0689e0 0%, #615e5d 100%);
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: solid;
+    border-color: #0689e0;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
