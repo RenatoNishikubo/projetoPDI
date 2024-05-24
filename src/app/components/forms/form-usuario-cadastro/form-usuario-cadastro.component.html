@@ -2,17 +2,22 @@
 <form class="form-container" align="center" [formGroup]="formCadastro">
     <mat-form-field appearance="outline">
         <mat-label>Nome de Usuario</mat-label>
-        <input matInput formControlName="nomeUsuario">
+        <input matInput formControlName="user_nickname">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Nome Completo</mat-label>
+        <input matInput formControlName="user_name">
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
         <mat-label>E-mail</mat-label>
-        <input matInput formControlName="email">
+        <input matInput formControlName="user_email">
     </mat-form-field>
     <br>
     <mat-form-field appearance="outline">
         <mat-label>Senha</mat-label>
-        <input matInput formControlName="senha">
+        <input matInput formControlName="user_password">
     </mat-form-field>
 </form>
 <mat-card-actions class="actions">

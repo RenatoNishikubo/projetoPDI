@@ -16,10 +16,11 @@ export class FormUsuarioCadastroComponent implements OnInit{
 
   ngOnInit(){
     this.formCadastro = this.formBuilder.group({
-      nomeUsuario:["", Validators.required],
-      email: ["", Validators.required],
-      senha: ["", Validators.required],
-      confirmarSenha: ["", Validators.required]
+      user_nickname:["", Validators.required],
+      user_name:["", Validators.required],
+      user_email: ["", Validators.required],
+      user_password: ["", Validators.required],
+      // confirmarSenha: ["", Validators.required]
     });
   } 
 

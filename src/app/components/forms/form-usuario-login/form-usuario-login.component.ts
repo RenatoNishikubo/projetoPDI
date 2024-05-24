@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-usuario-login',
@@ -11,6 +12,7 @@ export class FormUsuarioLoginComponent implements OnInit{
   declare formLogin: FormGroup;
 
   constructor(
+    private router: Router,
     private formBuilder: FormBuilder,
   ){}
 
@@ -19,5 +21,8 @@ export class FormUsuarioLoginComponent implements OnInit{
       email: ["", Validators.required],
       senha: ["", Validators.required]
     });
+  }
+  irParaCadastro(){
+    this.router.navigateByUrl('/cadastro')
   } 
 }

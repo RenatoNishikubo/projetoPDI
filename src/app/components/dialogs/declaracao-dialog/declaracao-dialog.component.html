@@ -1,4 +1,4 @@
-<mat-dialog-content *ngIf="this.informacoes">
+<mat-dialog-content class="container" *ngIf="this.informacoes">
     <h2 mat-dialog-title>Dados do Declarante</h2>
     <mat-list role="list">
         <mat-list-item >
@@ -21,7 +21,7 @@
         <mat-divider></mat-divider>
     </mat-list>
     <p></p>
-    <h2 mat-dialog-title>Propriedades do Declarante</h2>
+    <h2 mat-dialog-title>Propriedades</h2>
     <mat-list>
         <mat-list-item *ngFor="let propriedade of this.informacoes.propriedades">
             {{propriedade.tipo}} - Compra feita em {{propriedade.anoCompra}} por {{propriedade.valorCompra}} || 
