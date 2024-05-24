@@ -15,7 +15,7 @@
     </mat-list>
     <h2 mat-dialog-title>Dependentes</h2>
     <mat-list>
-        <mat-list-item *ngFor="let dependente of this.informacoes.dependentes" >
+        <mat-list-item *ngFor="let dependente of this.informacoes.dependente" >
             {{dependente.tipo}} - {{dependente.nome}}, Documento: {{dependente.documento}}
         </mat-list-item>
         <mat-divider></mat-divider>
@@ -23,7 +23,7 @@
     <p></p>
     <h2 mat-dialog-title>Propriedades</h2>
     <mat-list>
-        <mat-list-item *ngFor="let propriedade of this.informacoes.propriedades">
+        <mat-list-item *ngFor="let propriedade of this.informacoes.propriedade">
             {{propriedade.tipo}} - Compra feita em {{propriedade.anoCompra}} por {{propriedade.valorCompra}} || 
             Venda  feita em {{propriedade.anoVenda}} por {{propriedade.valorVenda}} 
         </mat-list-item>

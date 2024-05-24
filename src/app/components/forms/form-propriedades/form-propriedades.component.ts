@@ -38,7 +38,7 @@ export class FormPropriedadesComponent implements OnInit{
 
   addFormGroup(){
     const newFormGroup = this.fb.group({
-      tipoPropriedade: ["", Validators.required],
+      tipo: ["", Validators.required],
       anoCompra: ["", Validators.required],
       anoVenda: ["", Validators.required],
       valorCompra: ["", Validators.required],

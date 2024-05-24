@@ -24,11 +24,11 @@ export class HomeComponent{
   constructor(private declaranteService : DeclaranteService){}
 
   AvancarForm(){
-    if(this.dadosDeclarante && this.dadosEndereco){
+    if(this.dadosDeclarante && this.dadosEndereco && this.dadosPropriedades){
       const declaracao = this.dadosDeclarante;
       declaracao.endereco = [this.dadosEndereco];
-      declaracao.dependentes = !this.dadosDependetes ? [] : this.dadosDependetes;
-      declaracao.propriedades = !this.dadosPropriedades ? [] : this.dadosPropriedades;
+      declaracao.dependente = !this.dadosDependetes ? [] : this.dadosDependetes;
+      declaracao.propriedade = !this.dadosPropriedades ? [] : this.dadosPropriedades;
       this.declaranteService.addDeclaracao(declaracao);
       }
       

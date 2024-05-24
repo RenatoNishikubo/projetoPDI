@@ -21,7 +21,7 @@ export class FormEnderecoComponent implements OnInit{
       cep: ["", Validators.required],
       rua: ["", Validators.required],
       numero: [0, Validators.required],
-      complemento: [null],
+      complemento: [null, Validators.required],
       bairro: ["", Validators.required],
       cidade: ["", Validators.required],
       estado: ["", Validators.required]

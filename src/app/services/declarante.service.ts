@@ -48,8 +48,8 @@ export interface Declaracao {
   profissao: string,
   contaBancaria: string,
   endereco: Endereco[],
-  dependentes:Denpendente[],
-  propriedades:Propriedade[]
+  dependente:Denpendente[],
+  propriedade:Propriedade[]
 }
 
 
@@ -66,11 +66,11 @@ export class DeclaranteService {
   }
 
   public getDeclaranteById(documento:string): Observable<Declaracao> {
-    return this.httpClient.get<Declaracao>('http://127.0.0.1:8000/api/declaracao/get/'+ documento)
+    return this.httpClient.get<Declaracao>('http://127.0.0.1:8000/api/declarantes/'+ documento)
   }
 
   public addDeclaracao(declaracao: Declaracao){
-    this.httpClient.post<Declaracao>('http://127.0.0.1:8000/api/declaracao/create', 
+    this.httpClient.post<Declaracao>('http://127.0.0.1:8000/api/declaracoes/create', 
     declaracao, {headers: this.header})
     .subscribe( res => {
       // console.log(res); 

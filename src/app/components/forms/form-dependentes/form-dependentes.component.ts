@@ -38,9 +38,9 @@ export class FormDependentesComponent implements OnInit {
 
   addFormGroup() {
     const newFormGroup = this.fb.group({
-      tipoDependente: ["", Validators.required],
-      nomeCompleto: ["", Validators.required],
-      cpf: ["", Validators.required],
+      tipo: ["", Validators.required],
+      nome: ["", Validators.required],
+      documento: ["", Validators.required],
       nascimento: ["", Validators.required],
     });
     this.formArray.push(newFormGroup);
