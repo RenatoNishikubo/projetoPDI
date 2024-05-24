@@ -18,7 +18,7 @@ Front-end: Angular/ Angular Material;
 
 Back-end: Python/ Django/ Sqlite;
 
-#Conteúdo
+# Conteúdo
 
 ![Tela de Login e Cadastro de Usuários](src/assets/apresentacao/telaLogin.png)
 Para de cadastros de novo usuários da plataforma;
