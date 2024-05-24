@@ -1,10 +1,10 @@
-#Seu Declarador IR Online
+# Seu Declarador IR Online
 
 App desenvolvido para um Projeto da Faculdade PDI 1
 
 Curso de Engenharia da Computação 
 
-#Introdução ao Projeto
+# Introdução ao Projeto
 
 O "Seu Declarador IR Online" é um aplicativo desenvolvido com o objetivo de facilitar o processo de registro e identificação de Declarantes de Imposto de Renda para empresas de contabilidade. Este projeto foi criado como parte da disciplina PDI 1 do curso de Engenharia da Computação e visa atender uma necessidade real encontrada no ambiente contábil: a gestão eficiente e organizada dos dados dos declarantes.
 
@@ -12,7 +12,7 @@ Com uma interface amigável e funcionalidades intuitivas, o aplicativo permite o
 
 Este projeto é um passo significativo no uso da tecnologia para resolver problemas práticos do dia a dia, demonstrando o potencial dos estudantes em criar soluções inovadoras e impactantes.
 
-#Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 Front-end: Angular/ Angular Material;
 
@@ -34,7 +34,7 @@ Para uma visualização rapida dos Declarantes Cadastrados;
 ![Dialog para ver todos as informações do Declarante](src/assets/apresentacao/dialogDeclarantes.png)
 Para uma visualização detalhada do Declarante selecionado;
 
-#Conclusão
+# Conclusão
 
 O "Seu Declarador IR Online" é uma solução eficaz desenvolvida para auxiliar empresas de contabilidade na gestão e identificação de Declarantes de Imposto de Renda. O projeto, concebido como parte do curso de Engenharia da Computação na disciplina PDI 1, busca simplificar o processo de registro através de uma interface intuitiva e funcional.
 
